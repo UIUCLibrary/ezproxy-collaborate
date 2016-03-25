@@ -1,0 +1,4 @@
+##### Script settings
+CONFIG_DIR = /usr/local/ezproxy/conf.d
+TEMPLATE_DIR = templates
+TEMPLATE_CONFIG = stanzas.cfg

@@ -5,8 +5,10 @@ Ezproxy Collaborate is a community-shared git archive of EzProxy database stanza
 
 ##Requirements
 
-# Perl installed
-## With module Text::Template (install via `cpan Text::Template` or some other method)
+# Perl installed (list of required modules below, can use cpan tool to install)
+## Text::Template
+## Config::General
+## File::Spec (should be part of most installs)
 # EzProxy Installed
 
 ## How it works

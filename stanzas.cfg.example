@@ -1,0 +1,5 @@
+<Books24x7>
+SiteIdentifier     = FakeSiteIdentifier
+TokenKey           = Your Selected Key
+TokenSignatureKey  = FakeSigKey
+</Books24x7>
