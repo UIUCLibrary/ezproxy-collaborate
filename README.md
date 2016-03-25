@@ -34,13 +34,13 @@ Then type `source ~/.bash_profile` to reload.
 
 You will need a directory to contain the various ezproxy files. stanza-per-file  `mkdir $EZPROXY_HOME/conf.d`
 
-### Modify ezproxy.cfg
+### Modify config.txt 
 
 Add the line
 ````
 IncludeFile $EZPROXY_HOME/conf.d/*stanza
 ````
-to the ezproxy.cfg file.
+to the config.txt file.
 ### Checkout ezproxy-collobrate on your ezproxy machine (requires git to be installed for now)
 
 ````
