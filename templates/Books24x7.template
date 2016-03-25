@@ -1,5 +1,5 @@
 Title Book24x7.com 
-URL http://library.books24x7.com/library.asp? 
+URL http://library.books24x7.com/library.asp?^B
 Books24x7Site {$SiteIdentifier} 
 TokenKey {$TokenKey} 
 TokenSignatureKey {$TokenSignatureKey} 
