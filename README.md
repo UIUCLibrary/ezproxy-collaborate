@@ -56,8 +56,11 @@ ezproxy_config_dir = $EZPROXY_HOME/conf.d
 
 Then run `bin/generate-stanzas.pl` to create templates
 
+## Important files and file naming conventions
 
-
+* stanzas.cfg has the institutional-specific information, such as passwords
+* template files end with either .template or _i.template. Use _i.template (ex. Books24x7_i.template) when there's information that will need to be supplied by the stanzas.cfg file. This way the generate-confgs.pl script can warn folks when they haven't added the corresponding stanza.
+* Files in conf.d should end in .stanza
 
 
 

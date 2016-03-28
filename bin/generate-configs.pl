@@ -39,7 +39,7 @@ FILE: while( my $filepath = readdir( $template_dir ) ) {
     }
 
     my $id = $filepath ;
-    $id =~ s/\.template// ;
+    $id =~ s/(_i)?\.template// ;
     
     # Setup the template
     my $template_filepath
@@ -48,6 +48,11 @@ FILE: while( my $filepath = readdir( $template_dir ) ) {
     my $template
         = Text::Template->new( TYPE => 'FILE',
                                SOURCE => $template_filepath ) ;
+
+
+    if( $filepath =~ /_i.template$/ && !defined($stanzas_config_ref->{ $id } ) ) {
+        warn "Institutional information needed for $id, but nothing found in stanza.cfg\n";
+    }
     
     my $text = $template->fill_in(  HASH => $stanzas_config_ref->{ $id }    ) ;
 
