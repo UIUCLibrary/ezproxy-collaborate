@@ -34,13 +34,6 @@ Then type `source ~/.bash_profile` to reload.
 
 You will need a directory to contain the various ezproxy files. stanza-per-file  `mkdir $EZPROXY_HOME/conf.d`
 
-### Modify config.txt 
-
-Add the line
-````
-IncludeFile $EZPROXY_HOME/conf.d/*stanza
-````
-to the config.txt file.
 ### Checkout ezproxy-collobrate on your ezproxy machine (requires git to be installed for now)
 
 ````
@@ -52,7 +45,17 @@ Copy ezproxy-collaborate.cfg.skel to ezproxy-collaborate.cfg
 Edit ezproxy-colloborate.cfg and change the entry to reflect the current ezproxy conf.d directory you created above
 ````
 ezproxy_config_dir = $EZPROXY_HOME/conf.d
+stanzas_includee   = $EZPROXY_HOME/stazas_include.cfg
 ````
+
+### Modify config.txt 
+
+Add the line
+````
+IncludeFile $EZPROXY_HOME/stanzas_include.cfg
+````
+to the config.txt file.
+
 
 Then run `bin/generate-stanzas.pl` to create templates
 
@@ -61,6 +64,7 @@ Then run `bin/generate-stanzas.pl` to create templates
 * stanzas.cfg has the institutional-specific information, such as passwords
 * template files end with either .template or _i.template. Use _i.template (ex. Books24x7_i.template) when there's information that will need to be supplied by the stanzas.cfg file. This way the generate-confgs.pl script can warn folks when they haven't added the corresponding stanza.
 * Files in conf.d should end in .stanza
+* stanzas_include.cfg - Apparently EzProxy doesn't allow for wildcards in the INcludeFile directive. However, you can include a file of IncludeFile. So the program always overwrites this file with the latest listings. Any additional stanzas added to conf.d but not in the templates should be included either in config.txt or in separate file.
 
 
 

@@ -30,6 +30,12 @@ my $stanzas_config_ref = { $stanzas_conf->getall } ;
 
 ## End of stanza setup
 
+
+# this is the include file ...to iclude
+
+my $include_listing, '>', $config{INCLUDE_FILE} or die "Could not open $config{INCLUDE_FILE} $!" ;
+
+
 opendir(my $template_dir,  $config{TEMPLATE_DIR}) or die "Can't open template directory ( $config{TEMPLATE_DIR} ) $!" ;
 
 FILE: while( my $filepath = readdir( $template_dir ) ) {
@@ -67,6 +73,9 @@ FILE: while( my $filepath = readdir( $template_dir ) ) {
     open my $target_fh, '>', $target_filepath or die "Couldn't open $target_filepath for writing $! " ;
     
     print $target_fh $text ;
-        
+    print $include_listing 
 }
+
+
+
 
