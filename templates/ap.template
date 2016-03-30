@@ -1,0 +1,50 @@
+[1][doc-viewer-oclc-logo.png]
+
+[2]Database Stanzas
+
+* AP Photo Archive
+
+Connect with fellow WorldShare users in the [3]OCLC Community Center
+* [4]View demo
+* [5]Upgrade to EZproxy 6.1.13
+* [6]Subscribe to OCLC updates and offers
+
+* [7]Support & Training home
+* [8]EZproxy
+* [9]Documentation
+* [10]Configure Resources
+* [11]Database Stanzas
+* AP Photo Archive
+
+AP Photo Archive
+
+AP Photo Archive requires EZproxy 3.0 or later with the following
+database definition in config.txt:
+
+Title AP Images
+URL http://apimages.ap.org/unsecured/logip.aspx
+Domain ap.org
+DJ accuweather.com
+DJ apimages.com
+Host apimages.ap.org
+Host apimages.org
+
+[12]© 2016 OCLC
+[13]Domestic and international trademarks and/or service marks of OCLC
+Online Computer Library Center, Inc. and its affiliates
+
+References
+
+1. file:///content/support
+2. file:///support/services/ezproxy/documentation/db.en.html
+3. http://www.oclc.org/community/home.en.html
+4. http://www5.oclc.org/downloads/tutorials/ezproxy/default.htm
+5. file:///support/services/ezproxy/documentation/download.en.html
+6. file:///email.en.html
+7. file:///support/home.en.html
+8. file:///support/services/ezproxy.en.html
+9. file:///support/services/ezproxy/documentation.en.html
+10. file:///support/services/ezproxy/documentation/cfg.en.html
+11. file:///support/services/ezproxy/documentation/db.en.html
+12. file:///policies/copyright.en.html
+13. file:///policies/trademarks.en.html

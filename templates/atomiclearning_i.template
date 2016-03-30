@@ -1,0 +1,7 @@
+Title Atomic Learning
+URL -form=post atomiclearning
+https://secure.atomiclearning.com/movies/
+FormVariable username= ${atomic_learning_user}
+FormVariable password= ${atomic_learning_password}
+#
+#To access this definition, you will need to construct a URL similar to:
