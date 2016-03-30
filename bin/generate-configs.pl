@@ -74,7 +74,7 @@ FILE: while( my $filepath = readdir( $template_dir ) ) {
     open my $target_fh, '>', $target_filepath or die "Couldn't open $target_filepath for writing $! " ;
     
     print $target_fh $text ;
-    print $include_listing "IncludeFile $filepath\n" ; 
+    print $include_listing "IncludeFile $template_filepath\n" ; 
 }
 
 
