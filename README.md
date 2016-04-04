@@ -88,7 +88,7 @@ Overall goal - a system that makes it easy to update and maintain ezproxy stanza
 
 ### Command line package-esque interactions
 Update everything
-` $> stanza update `
+` stanza update `
 
 Update a particular stanza
 ` stanza update books24x7 `
@@ -97,7 +97,7 @@ Add a new resource to have stanzas
 ` stanza add acm `
 
 See differences from current setup and future one (dry run)
-` stanza preview  `SS
+` stanza preview  `
 
 Suggest a new template
 ` stanza suggest id filename `
