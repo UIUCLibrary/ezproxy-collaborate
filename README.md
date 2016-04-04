@@ -67,4 +67,60 @@ Then run `bin/generate-stanzas.pl` to create templates
 * stanzas_include.cfg - Apparently EzProxy doesn't allow for wildcards in the INcludeFile directive. However, you can include a file of IncludeFile. So the program always overwrites this file with the latest listings. Any additional stanzas added to conf.d but not in the templates should be included either in config.txt or in separate file.
 
 
+## Goals 
+
+Overall goal - a system that makes it easy to update and maintain ezproxy stanzas.
+ 
+* Ability to have a list of what resources need to have stanzas / be updated
+* be cron / scheduled task friendly for updates
+* maybe have limited web interface 
+* wrap some common git operations, such as git pull
+* voting on configurations
+* possibly different configurations that could be chosen (so resouarce id + config id)
+* interactive filling out of template (with help info?)
+* When updating, review changes to stanzas (both in what was updated and differences in files), possible also allow to preview changes
+* default to verbose, with way to turn off for cron
+* Consider having a Rails-esque convention w/ local and vendor directories, local overriding vendor
+* institutional-specific config in json
+* Puppet compatible 
+
+## Some possible future interaction/use
+
+### Command line package-esque interactions
+Update everything
+` $> stanza update `
+
+Update a particular stanza
+` stanza update books24x7 `
+
+Add a new resource to have stanzas
+` stanza add acm `
+
+See differences from current setup and future one (dry run)
+` stanza preview  `SS
+
+Suggest a new template
+` stanza suggest id filename `
+
+
+### Possible interaction when stanza requires institutional-specific info
+```
+$> stanza add books24x7
+adding books24x7
+books24x7 requires some institutional information
+Do you want to supply that now (y/n) ?
+$> y
+Please supply SiteIdentifier (or m for more info)?
+$> m
+SiteIdentifier - Supplied  by Books24x7
+TokenKey       - Secret only you know  
+TokenSignatureKey - Some other secret{$TokenSignatureKey}
+
+Please supply SiteIdentifier (or m for more info)?
+$> BlahBlahBlah
+Please supply TokenKey (or m for more info)?
+$> MoreBlah
+Please supply TokenSignatureKey (or m for more info)?
+$> BlahBlahBlah
+done adding books24x7
 
