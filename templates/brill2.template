@@ -1,0 +1,18 @@
+Title Encyclopedia of Islam
+URL http://www.encislam.brill.nl
+DJ brill.nl
+DJ ingentaconnect.com
+DJ ingentaselect.com
+Find referer=http://
+Replace referer=http://^A
+Title New Pauly Online
+URL http://www.paulyonline.brill.nl
+DJ brill.nl
+DJ ingentaconnect.com
+DJ ingentaselect.com
+Find referer=http://
+Replace referer=http://^A
+{# the name of this file MUST come in alphanumerical order
+ # before any other stanzas that contain 
+ # brill.nl, ingentaconnect.com, or ingentaselect.com
+}
