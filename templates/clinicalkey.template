@@ -1,0 +1,56 @@
+HTTPMethod PUT
+HTTPMethod DELETE
+HTTPHeader CkApp-Request-Product
+HTTPHeader CK-Path
+HTTPHeader X-CkApp-Request-Locale
+Title ClinicalKey
+MimeFilter application/json .* javascript
+URL https://www.clinicalkey.com
+HJ www.clinicalkey.com
+HJ www.clinicalkey.es
+HJ https://www.clinicalkey.es
+DJ clinicalkey.es
+DJ clinicalkey.com
+NeverProxy cdn.clinicalkey.com
+
+Title ClinicalKey Australia
+MimeFilter application/json .* javascript
+URL https://www.clinicalkey.com.au
+HJ www.clinicalkey.com.au
+DJ clinicalkey.com.au
+
+{# ClinicalKey Nursing #}
+HTTPHeader CkApp-Request-Product
+HTTPHeader CK-Path
+HTTPHeader X-CkApp-Request-Locale
+Title ClinicalKey Nursing
+MimeFilter application/json .* javascript
+URL http://www.clinicalkey.com/nursing
+HJ www.clinicalkey.com
+DJ clinicalkey.com
+NeverProxy cdn.clinicalkey.com
+
+Title ClinicalKey Nursing Australia
+MimeFilter application/json .* javascript
+URL http://www.clinicalkey.com.au/nursing
+HJ www.clinicalkey.com.au
+DJ clinicalkey.com.au
+NeverProxy cdn.clinicalkey.com
+
+Title EMBASE
+URL http://www.embase.com/
+HJ www.embase.com
+DJ embase.com
+HJ acw.elsevier.com
+NeverProxy static.embase.com
+
+{#
+ # To support the full funcitonality of ClinicalKey within EZproxy, the
+ # following lines must be added to the EZproxy config.txt file:
+ #
+ # HTTPMethod PUT
+ # HTTPMethod DELETE
+ #
+ # These directives are not position dependent, and can be placed anywhere
+ # within the config.txt file to affect the ClinicalKey stanza.
+#}
