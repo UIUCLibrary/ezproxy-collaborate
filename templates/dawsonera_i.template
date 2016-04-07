@@ -1,0 +1,5 @@
+Title DawsonEra
+URL http://www.dawsonera.com/depp/ezproxy/EZProxyLogin.html?^B
+TokenKey {$DawsonTokenKey}
+TokenSignatureKey {$DawsonTokenSigKey}
+DJ www.dawsonera.com
