@@ -67,6 +67,17 @@ Then run `bin/generate-stanzas.pl` to create templates
 * stanzas_include.cfg - Apparently EzProxy doesn't allow for wildcards in the INcludeFile directive. However, you can include a file of IncludeFile. So the program always overwrites this file with the latest listings. Any additional stanzas added to conf.d but not in the templates should be included either in config.txt or in separate file.
 
 
+## identify_unnecessary_lines.pl
+
+Usage: `bin/identify_unnecessary_lines.pl config.txt > config_marked`
+
+This is a utility script, which is still pretty rudimentry, that will process the given ezproxy file and the produced stanza files and output the ezproxy file w/ lines contained in the stanzas prefixed with...
+`### in template #`.
+
+Note this is really mean to help the process of migrating from one central config.txt file to a smaller config.txt file and files in conf.d. At this point it's highly, highly recommended to have a human being look through the file and figure out which commented sections can be taken out.
+
+Right now this process ignores files w/ Option in them as well as lines of comments and whitespaces.
+
 ## Goals 
 
 Overall goal - a system that makes it easy to update and maintain ezproxy stanzas.
