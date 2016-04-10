@@ -1,0 +1,13 @@
+Title EBL
+AllowVars u
+EncryptVar u {$EBLEncrytVar}
+EBLSecret {$EBLSecret}
+URL http://www.{$EBLInstitutionId}.eblib.com
+URL http://{$EBLInstitutionId}.eblib.com
+DJ eblib.com
+
+{#
+ # EBLEncryptVar - encryption key for user info
+ # EBLSecret     - password provided by EBL
+ # EBLInstitutionId - provided by EBL
+ #}
