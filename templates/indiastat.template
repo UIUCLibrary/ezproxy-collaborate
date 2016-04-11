@@ -1,0 +1,7 @@
+Title IndiaStat
+URL http://www.indiastat.com
+DJ indiastat.com
+Find window.location.href=deltaNode.content
+Replace
+window.location.href=deltaNode.content.replace(/www.indiastat.com/,
+'^pwww.indiastat.com^')

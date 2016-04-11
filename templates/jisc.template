@@ -1,0 +1,62 @@
+Title Copac
+URL http://copac.jisc.ac.uk/
+HJ copac.ac.uk
+HJ copac.jisc.ac.uk
+HJ https://copac.ac.uk
+HJ https://copac.jisc.ac.uk
+HJ https://jisc.ac.uk
+HJ https://www.jisc.ac.uk
+HJ jisc.ac.uk
+HJ www.copac.ac.uk
+HJ www.jisc.ac.uk
+DJ jisc.ac.uk
+
+Title JISC eCollections
+URL http://www.jisc-collections.ac.uk
+HJ www.jisc-collections.ac.uk
+HJ www.jiscecollections.ac.uk
+HJ jiscecollections.ac.uk
+DJ jisc-collections.ac.uk
+DJ jiscecollections.ac.uk
+
+
+Title JISC MediaHub
+URL http://jiscmediahub.ac.uk
+H www.jiscmediahub.ac.uk
+H edina.ac.uk
+DJ jiscmediahub.ac.uk
+DJ mimas.ac.uk
+
+
+Title JISC Historical Texts
+URL http://historicaltexts.jisc.ac.uk/
+HJ data.historicaltexts.jisc.ac.uk
+HJ historicaltexts.jisc.ac.uk
+HJ https://data.historicaltexts.jisc.ac.uk
+HJ https://historicaltexts.jisc.ac.uk
+HJ jischistoricbooks.ac.uk
+HJ www.jischistoricbooks.ac.uk
+DJ historicaltexts.jisc.ac.uk
+NeverProxy apis.google.com
+
+Title JISC Journal Archives
+URL http://journalarchives.jisc.ac.uk
+H data.journalarchives.jisc.ac.uk
+H jcolls.mimas.ac.uk
+H jiscjournalarchives.ac.uk
+H www.jiscjournalarchives.ac.uk
+H www.jisc-content.ac.uk
+H https://data.journalarchives.jisc.ac.uk
+H https://jiscjournalarchives.ac.uk
+H https://journalarchives.jisc.ac.uk
+DJ jiscjournalarchives.ac.uk
+DJ journalarchives.jisc.ac.uk
+DJ mimas.ac.uk
+DJ jisc-content.ac.uk
+
+Title Zetoc
+URL http://zetoc.jisc.ac.uk
+H https://zetoc.jisc.ac.uk
+H https://zetoc.mimas.ac.uk
+H zetoc.jisc.ac.uk
+H zetoc.mimas.ac.uk

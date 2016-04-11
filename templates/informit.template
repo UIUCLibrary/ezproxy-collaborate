@@ -1,0 +1,10 @@
+Title Informit Search
+URL http://search.informit.com.au/
+DJ informit.com.au
+
+AnonymousURL -RE -CS
++http://search\.informit\.com\.au/tvnews/[A-Z0-9]+\.wmv
+Title Informit Search
+URL http://search.informit.com.au/
+DJ informit.com.au
+AnonymousURL -*
