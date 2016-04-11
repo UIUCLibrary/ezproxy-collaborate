@@ -40,7 +40,9 @@ while( my $line = <$ezproxy_fh> ) {
     if( $reference_lines->{ normalize_ezproxy_line( $line ) }
        && ! ezproxy_comment_line( $line )
        && ! ezproxy_option_line( $line )
-       && ! all_whitespace( $line ) 
+       && ! ezproxy_form_variable_line( $line ) 
+       && ! all_whitespace( $line )
+
      ) {
         $line = "### in template # " . $line ;
     }
@@ -103,6 +105,16 @@ sub ezproxy_option_line {
     my $line = shift ;
 
     if( $line =~ /Option/ ) {
+        return 1;
+    }
+    return 0 ;
+}
+
+sub ezproxy_form_variable_line {
+
+    my $line = shift ;
+
+    if( $line =~ /FormVariable/ ) {
         return 1;
     }
     return 0 ;
