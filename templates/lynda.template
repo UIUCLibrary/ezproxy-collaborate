@@ -1,0 +1,10 @@
+ProxyHostnameEdit ^lynda.com$ lyndacom
+ProxyHostnameEdit .lynda.com$ lyndacom
+Option NoHttpsHyphens
+Title Lynda.com
+URL http://iplogin.lynda.com
+HJ iplogin.lynda.com
+HJ www.lynda.com
+HJ lynda.com
+DJ lynda.com
+Option HttpsHyphens

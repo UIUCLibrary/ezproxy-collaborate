@@ -1,0 +1,5 @@
+T Kanopy Videostreaming
+U http://${Kanopy_Institution_ID}.kanopystreaming.com
+HJ https://${Kanopy_Institution_ID}.kanopystreaming.com
+HJ ${Kanopy_Institution_ID}.kanopystreaming.com
+DJ kanopystreaming.com

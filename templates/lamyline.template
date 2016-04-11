@@ -1,0 +1,9 @@
+Title lamyline.fr
+URL
+http://lamyline.lamy.fr/Content/Inicio.aspx?DATA=ykxZZJK3rirw;t2w7AN
+KY
+DJ lamy.fr
+Find window.location.href = res.value.ResultListFullPath;
+Replace window.location.href =
+res.value.ResultListFullPath.replace('lamyline.lamy.fr',
+'plamyline.lamy.fr');
