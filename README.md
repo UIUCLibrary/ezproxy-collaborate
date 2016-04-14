@@ -1,4 +1,4 @@
-# Ezproxy Collaborate
+ # Ezproxy Collaborate
 
 Ezproxy Collaborate is a community-shared git archive of EzProxy database stanzas with tools for install and deploying the configuration changes.
 
@@ -21,7 +21,7 @@ Note, these instructions will refer to $EZPROXY_HOME, which is a placeholder for
 
 ### Setting EzProxy Home to make the steps easier (optional)
 
-if you are on a linux system running a bash shell, you can modify your ~/.bash_profile to include the following, replacign /usr/local/ezproxy with the path where the ezproxy binary exists.
+if you are on a linux system running a bash shell, you can modify your ~/.bash_profile to include the following, replacing /usr/local/ezproxy with the path where the ezproxy binary exists.
 
 ````
 EZPROXY_HOME = /usr/local/ezproxy
@@ -34,10 +34,10 @@ Then type `source ~/.bash_profile` to reload.
 
 You will need a directory to contain the various ezproxy files. stanza-per-file  `mkdir $EZPROXY_HOME/conf.d`
 
-### Checkout ezproxy-collobrate on your ezproxy machine (requires git to be installed for now)
+### Checkout ezproxy-collaborate on your ezproxy machine (requires git to be installed for now)
 
 ````
-git clone - needrepourl
+git clone - https://github.com/UIUCLibrary/ezproxy-collaborate.git
 cd ezproxy-collaborate
 ````
 
@@ -45,7 +45,7 @@ Copy ezproxy-collaborate.cfg.skel to ezproxy-collaborate.cfg
 Edit ezproxy-colloborate.cfg and change the entry to reflect the current ezproxy conf.d directory you created above
 ````
 ezproxy_config_dir = $EZPROXY_HOME/conf.d
-stanzas_includee   = $EZPROXY_HOME/stazas_include.cfg
+stanzas_include   = $EZPROXY_HOME/stazas_include.cfg
 ````
 
 ### Modify config.txt 
@@ -71,7 +71,7 @@ Then run `bin/generate-stanzas.pl` to create templates
 
 Usage: `bin/identify_unnecessary_lines.pl config.txt > config_marked`
 
-This is a utility script, which is still pretty rudimentry, that will process the given ezproxy file and the produced stanza files and output the ezproxy file w/ lines contained in the stanzas prefixed with...
+This is a utility script, which is still pretty rudimentary, that will process the given ezproxy file and the produced stanza files and output the ezproxy file w/ lines contained in the stanzas prefixed with...
 `### in template #`.
 
 Note this is really mean to help the process of migrating from one central config.txt file to a smaller config.txt file and files in conf.d. At this point it's highly, highly recommended to have a human being look through the file and figure out which commented sections can be taken out.
@@ -87,7 +87,7 @@ Overall goal - a system that makes it easy to update and maintain ezproxy stanza
 * maybe have limited web interface 
 * wrap some common git operations, such as git pull
 * voting on configurations
-* possibly different configurations that could be chosen (so resouarce id + config id)
+* possibly different configurations that could be chosen (so resource id + config id)
 * interactive filling out of template (with help info?)
 * When updating, review changes to stanzas (both in what was updated and differences in files), possible also allow to preview changes
 * default to verbose, with way to turn off for cron
