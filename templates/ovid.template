@@ -1,0 +1,14 @@
+Title Ovid including Primal Pictures
+URL http://ovidsp.ovid.com/autologin.html
+Host https://ovidsp.ovid.com
+Host ovidsp.tx.ovid.com
+Host gateway.ovid.com
+Host anatomy.tv
+Host https://anatomy.tv
+Host https://secure.anatomy.tv
+DJ ovid.com
+DJ anatomy.tv
+Find returnUrl=http://
+Replace returnUrl=http://^A
+Find id="returnUrl" value="http://
+Replace id="returnUrl" value="http://^A

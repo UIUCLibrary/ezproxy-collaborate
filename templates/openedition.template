@@ -1,0 +1,11 @@
+
+Title OpenEdition
+URL http://www.openedition.org
+DJ openedition.org
+DJ revues.org
+DJ hypotheses.org
+DJ calenda.org
+Host bookserver.revues.org
+Host search.openedition.org
+NeverProxy static.openedition.org
+NeverProxy static-origin.openedition.org
