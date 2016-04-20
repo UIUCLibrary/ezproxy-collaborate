@@ -1,0 +1,12 @@
+
+Option CookiePassThrough
+T Worth Global Style Network(WGSN): Creative Intelligence
+MimeFilter application/json .* javascript
+U http://www.wgsn.com/content/section/home.html
+H www.wgsn.com
+D wgsn.com
+DJ wgsn.com
+DJ google.com
+Find http:\/\/www.wgsn.com
+Replace http:\/\/^pwww.wgsn.com^
+Option Cookie

@@ -1,0 +1,12 @@
+Title UpToDate
+URL
+http://www.uptodate.com/online/content/search.do?unid=^u&srcsys={$UpToDateSrcsys}>&eiv=2.1.0
+HJ https://www.uptodate.com
+HJ https://www.uptodateonline.com
+HJ uptodate.com
+HJ uptodateonline.com
+HJ www.uptodate.com
+HJ www.uptodateonline.com
+DJ uptodate.com
+AllowVars u
+EncryptVar u {$UpToDateSecret}
