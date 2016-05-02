@@ -17,26 +17,16 @@ Templates are stored for each database family or groups. Various scripts can be 
 
 ## Setup
 
-Note, these instructions will refer to $EZPROXY_HOME, which is a placeholder for wherever you have ezproxy installed.
-
-### Setting EzProxy Home to make the steps easier (optional)
-
-if you are on a linux system running a bash shell, you can modify your ~/.bash_profile to include the following, replacing /usr/local/ezproxy with the path where the ezproxy binary exists.
-
-````
-EZPROXY_HOME = /usr/local/ezproxy
-export EZPROXY_HOME
-````
-
-Then type `source ~/.bash_profile` to reload.
+Note, these instructions will assume you have ezproxy setup in /usr/local/ezproxy.  If you don't, just remember to change that in the following examples
 
 ### Set up directory
 
-You will need a directory to contain the various ezproxy files. stanza-per-file  `mkdir $EZPROXY_HOME/conf.d`
+You will need a directory to contain the various ezproxy files. stanza-per-file  `mkdir /usr/local/ezproxy/conf.d`
 
 ### Checkout ezproxy-collaborate on your ezproxy machine (requires git to be installed for now)
 
 ````
+cd ~
 git clone - https://github.com/UIUCLibrary/ezproxy-collaborate.git
 cd ezproxy-collaborate
 ````
@@ -44,15 +34,15 @@ cd ezproxy-collaborate
 Copy ezproxy-collaborate.cfg.skel to ezproxy-collaborate.cfg
 Edit ezproxy-colloborate.cfg and change the entry to reflect the current ezproxy conf.d directory you created above
 ````
-ezproxy_config_dir = $EZPROXY_HOME/conf.d
-stanzas_include   = $EZPROXY_HOME/stazas_include.cfg
+ezproxy_config_dir = /usr/local/ezproxy/conf.d
+stanzas_include   = /usr/local/ezproxy/stazas_include.cfg
 ````
 
-### Modify config.txt 
+### Modify the ezproxy config.txt 
 
 Add the line
 ````
-IncludeFile $EZPROXY_HOME/stanzas_include.cfg
+IncludeFile /usr/local/ezproxy/stanzas_include.cfg
 ````
 to the config.txt file.
 
@@ -62,6 +52,7 @@ Then run `bin/generate-stanzas.pl` to create templates
 ## Important files and file naming conventions
 
 * stanzas.cfg has the institutional-specific information, such as passwords
+* templates are found in local and vendor, more on that below
 * template files end with either .template or _i.template. Use _i.template (ex. Books24x7_i.template) when there's information that will need to be supplied by the stanzas.cfg file. This way the generate-confgs.pl script can warn folks when they haven't added the corresponding stanza.
 * Files in conf.d should end in .stanza
 * stanzas_include.cfg - Apparently EzProxy doesn't allow for wildcards in the INcludeFile directive. However, you can include a file of IncludeFile. So the program always overwrites this file with the latest listings. Any additional stanzas added to conf.d but not in the templates should be included either in config.txt or in separate file.
@@ -77,6 +68,24 @@ This is a utility script, which is still pretty rudimentary, that will process t
 Note this is really mean to help the process of migrating from one central config.txt file to a smaller config.txt file and files in conf.d. At this point it's highly, highly recommended to have a human being look through the file and figure out which commented sections can be taken out.
 
 Right now this process ignores files w/ Option in them as well as lines of comments and whitespaces.
+
+
+## local and vendor directory.
+
+Right now there's a vendor directory containing templates from various sources, it might look something like:
+
+* vendor/
+  * oclc/
+  * ebsco/
+
+You don't need to modify these files if you want to override them, instead you can create a local directory. Copy the vendor file in their and modify it.
+
+You can even remove local from the .gitingore file and keep track of those local changes.
+
+Any file in local with the same name as a file in vendor will "override" the vendor template. (The first instance of that file name in the vendor directories will override any following ones).
+
+Right now the convention of numerical prefixes can make this a bit tricky, so be careful there. That might change based on user request.
+
 
 ## Goals 
 

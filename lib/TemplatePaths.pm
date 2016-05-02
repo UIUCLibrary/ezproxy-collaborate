@@ -84,7 +84,7 @@ sub template_paths_array {
                                     path => $path_mappings->{$_} }
                           } sort keys %{$path_mappings} ;
 
-    return \@template_paths ;
+    return @template_paths ;
 }
 
 sub add_paths {
