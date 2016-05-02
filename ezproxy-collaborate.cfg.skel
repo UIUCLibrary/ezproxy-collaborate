@@ -2,4 +2,6 @@
 CONFIG_DIR = /usr/local/ezproxy/conf.d
 INCLUDE_FILE=/usr/local/ezproxy/stanzas_include.cfg
 TEMPLATE_DIR = templates
+TEMPLATE_LOCAL_DIR = local
+TEMPLATE_VENDOR_DIR = vendor
 TEMPLATE_CONFIG = stanzas.cfg
