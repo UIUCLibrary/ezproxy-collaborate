@@ -13,7 +13,7 @@ use lib "$FindBin::Bin/lib" ;
 use TemplatePaths ;
 
 
-my $templates_ref
+my @template_paths
     = TemplatePaths::template_paths_array({vendor_dir => 't/vendor',
                                            local_dir  => 't/local',
                                        });
@@ -48,7 +48,7 @@ use Data::Dumper ;
 #diag( "Results of call: " . Dumper( $templates_ref ) . "\n\n") ;
 #diag( "Results of call: " . Dumper( $expected_ref ) . "\n\n") ;
 
-is_deeply( $templates_ref, $expected_ref ) ;
+is_deeply( \@template_paths, $expected_ref ) ;
 
 
 
