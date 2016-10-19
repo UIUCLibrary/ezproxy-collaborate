@@ -11,6 +11,7 @@ require Exporter ;
                 all_whitespace
                 contains_url
                 normalize_url_content
+                normalize_title
            ) ;
 %EXPORT_TAGS = ( all => \@EXPORT_OK) ;
 
@@ -115,6 +116,19 @@ sub normalize_url_content {
     
     return $line ;
 }
+
+sub normalize_title {
+
+    my $raw_title = shift ;
+
+    $raw_title =~ s/[^\w]/_/g;
+    $raw_title = lc($raw_title );
+    $raw_title =~ s/__+/_/g ;
+    
+    return $raw_title ;
+    
+}
+ 
 
     
 
