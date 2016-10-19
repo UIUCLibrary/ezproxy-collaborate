@@ -27,6 +27,8 @@ my %config = $conf->getall ;
 ## End of config setup
 
 
+use EzproxyConfig qw(:all) ;
+
 # question, use stanzas or templates? or either?
 
 my $reference_lines = get_stanza_lines_ref( $config{ CONFIG_DIR } ) ;
@@ -76,56 +78,3 @@ sub get_stanza_lines_ref {
     return \%lines ;
 }
 
-sub normalize_ezproxy_line {
-
-    my $line = shift ;
-    # do some normalization to make comparison a bit easier
-    #
-    # for now, chompa nd just remove all whitespace 
-
-    chomp( $line ) ;
-    $line =~ s/\s//g;
-
-    return $line ;
-}
-
-sub ezproxy_comment_line {
-
-    my $line = shift ;
-
-    if( $line =~ /^\s* #/ ) {
-        return 1;
-    }
-    return 0 ;
-}
-
-
-sub ezproxy_option_line {
-
-    my $line = shift ;
-
-    if( $line =~ /Option/ ) {
-        return 1;
-    }
-    return 0 ;
-}
-
-sub ezproxy_form_variable_line {
-
-    my $line = shift ;
-
-    if( $line =~ /FormVariable/ ) {
-        return 1;
-    }
-    return 0 ;
-}
-
-
-sub all_whitespace {
-    my  $line = shift ;
-
-    if( $line =~ /^\s*$/ ) {
-        return 1 ;
-    }
-    return 0 ;
-}
